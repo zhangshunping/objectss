@@ -1,0 +1,31 @@
+{"level":"info","msg":"path:/data/repositories/p94182670/tie4w7bzfy20190919174614ComsumerNume:0","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p94182670/tie4w7bzfy20190919174614 oss://educoder.tmp ：Git Path /data/repositories/p94182670/tie4w7bzfy20190919174614:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/innov/34a6mhzvComsumerNume:1","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p06743295/5onbpuayfr20190827092542ComsumerNume:1","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p36254817/3e6av5pfmb20190826152732ComsumerNume:1","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p36254817/3e6av5pfmb20190826152732 oss://educoder.tmp ：Git Path /data/repositories/p36254817/3e6av5pfmb20190826152732:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p79561480/qmfhls4gt920190827092542ComsumerNume:2","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p79561480/qmfhls4gt920190827092542 oss://educoder.tmp ：Git Path /data/repositories/p79561480/qmfhls4gt920190827092542:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p48209175/lt4o7fs6nc20190826152808ComsumerNume:3","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p48209175/lt4o7fs6nc20190826152808 oss://educoder.tmp ：Git Path /data/repositories/p48209175/lt4o7fs6nc20190826152808:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p35086412/6zxw3fonyg20190918164901ComsumerNume:4","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p35086412/6zxw3fonyg20190918164901 oss://educoder.tmp ：Git Path /data/repositories/p35086412/6zxw3fonyg20190918164901:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p43182670/oyj96apqtx20190729154720ComsumerNume:5","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p43182670/oyj96apqtx20190729154720 oss://educoder.tmp ：Git Path /data/repositories/p43182670/oyj96apqtx20190729154720:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/educoder/29am7wv4ComsumerNume:6","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"path:/data/repositories/p36152947/cz7yw3enComsumerNume:6","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:48+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p36152947/cz7yw3en oss://educoder.tmp ：Git Path /data/repositories/p36152947/cz7yw3en:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:48+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:51+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/innov/34a6mhzv oss://educoder.tmp ：Git Path /data/repositories/innov/34a6mhzv:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:51+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:51+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/p06743295/5onbpuayfr20190827092542 oss://educoder.tmp ：Git Path /data/repositories/p06743295/5onbpuayfr20190827092542:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:51+08:00"}
+{"level":"info","msg":"copy exec_shell:  errexec: \"/bin/bash\": file does not exist","time":"2020-07-17T18:24:51+08:00"}
+{"level":"error","msg":"objectStore upload Failed：commad  ossutil64 cp -u -r /data/repositories/educoder/29am7wv4 oss://educoder.tmp ：Git Path /data/repositories/educoder/29am7wv4:shell exec return  %!(NOVERB)%!(EXTRA string=, string= err, *exec.Error=exec: \"/bin/bash\": file does not exist)","time":"2020-07-17T18:24:51+08:00"}
+{"level":"info","msg":"Ending,消费者消费的gitpath个数为:10","time":"2020-07-17T18:24:51+08:00"}
