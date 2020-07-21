@@ -22,6 +22,7 @@ import (
 	"objectss/handler"
 	"objectss/utils"
 	"sync"
+	"time"
 )
 
 // obsCmd represents the obs command
@@ -60,19 +61,22 @@ var uploadgitCmd = &cobra.Command{
 	Short: "huawei cloud obs upaloadgit ",
 	Long: ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		wg:=new(sync.WaitGroup)   //需要值引用
-		var ch =make(chan string, ChannelCap)
+		startT:=time.Now()
+		utils.Log.Infof("Staring,开始迁移任务.")
+		wg := new(sync.WaitGroup)   //需要值引用
+		var ch = make(chan string, ChannelCap)
 		// 初始化databse
-		dbw:=database.Initmysql(Sqllimmit,SqlConnect)
+		dbw := database.Initmysql(Sqllimmit, SqlConnect)
 		// 默认查询查询15天前的tpis
-		dbw.QuerData(Sqldays,Sqllimmit)
-		wgNums:=len(dbw.Repositories)
-		go handler.Productor(ch,dbw)
+		dbw.QuerData(Sqldays, Sqllimmit)
+		wgNums := len(dbw.Repositories)
+		go handler.Productor(ch, dbw)
 		wg.Add(wgNums)
-		for i:=0;i<ConsumerNum;i++{
-			go handler.Consumer(ch,dbw ,wg,ObjectStorgeLink)
+		for i := 0; i < ConsumerNum; i++ {
+			go handler.Consumer(ch, dbw, wg, ObjectStorgeLink)
 		}
 		wg.Wait()
-		utils.Log.Info("Ending,消费者消费的gitpath个数为:",handler.ComsuNum)
+		eT := time.Since(startT)
+		utils.Log.Infof("Ending,消费者消费的gitpath个数为:%d,耗时：%v", handler.ComsuNum,eT)
 	},
 }

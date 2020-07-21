@@ -24,7 +24,7 @@ type DbWorker struct {
 // 仓库数据
 type Repositorytb struct {
 	Id int
-	// NullString代表一个为NULL的字符串
+	// NullString代表一个为NULL的字符串,保存绝对路径
 	Path sql.NullString
 }
 
@@ -50,13 +50,11 @@ func Initmysql(RepositoriesLenth int, sqlconnect string) *DbWorker {
 // 查询数据
 //d  负数表示多少天之前
 func (dbw *DbWorker) QuerData(days int,sqlLimits int) {
-
-
 	// 取出15天没更新的数据
 	currentTime := time.Now()
 	oldTime := currentTime.AddDate(0, 0, days).Format("2006-01-02 15:04:05")
 	//取15天没更新的前10000条数据
-	sql := fmt.Sprintf("SELECT id, path From repositories where oss = 0 and updated_at > '%s' limit %d", oldTime,sqlLimits)
+	sql := fmt.Sprintf("SELECT id, path From repositories where oss = 0 and updated_at < '%s' limit %d", oldTime, sqlLimits)
 	rows, err := dbw.Db.Query(sql)
 
 	defer rows.Close()
@@ -85,10 +83,11 @@ func (dbw *DbWorker) QuerData(days int,sqlLimits int) {
 
 // 更新数据库
 func (dbw *DbWorker) UpdateRepositoryOssbyPath(path string) {
-	sql := fmt.Sprintf("UPDATE repositories SET oss = 1 where path = '%s'", path)
+	currentTime := time.Now().Format("2006-01-02 15:04:05")
+	sql := fmt.Sprintf("UPDATE repositories SET oss = 1, oss_trans_time = '%s' where path = '%s'", currentTime, path)
 	_, err := dbw.Db.Exec(sql)
 	if err != nil {
-		utils.Log.Debugf("updateRepositoryOssbyPath error:", err, ", sql:", sql)
+		utils.Log.Error("updateRepositoryOssbyPath error:", err, ", sql:", sql)
 	}
 }
 
