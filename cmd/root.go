@@ -33,6 +33,7 @@ var (
 	ChannelCap int // channel的容量大小
 	ConsumerNum int //comusers Numebr
 	SqlConnect string // mysql 链接方式
+	obsCommand string // obs 命令
 
 )
 
@@ -71,6 +72,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&SqlConnect, "sqlcon", "root:123456789@tcp(127.0.0.1:3306)/gitlab", "connect sql (default is $HOME/.objectss.yaml) ")
 	rootCmd.PersistentFlags().IntVarP(&ConsumerNum,"consusmerNum","s",100,"Run the number of comsumer goroutines (-s 100)")
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.objectss.yaml) ")
+	rootCmd.PersistentFlags().StringVarP(&obsCommand, "obsCommand", "O", "obsutil sync", "obs cmd (default is obsutil sync)")
 
 	rootCmd.PersistentFlags().IntVarP(&ChannelCap,"ChannelCap","c",10,"channle cap (-c 10)")
 	// Cobra also supports local flags, which will only ru

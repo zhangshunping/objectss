@@ -73,7 +73,7 @@ var uploadgitCmd = &cobra.Command{
 		go handler.Productor(ch, dbw)
 		wg.Add(wgNums)
 		for i := 0; i < ConsumerNum; i++ {
-			go handler.Consumer(ch, dbw, wg, ObjectStorgeLink)
+			go handler.Consumer(ch, dbw, wg, ObjectStorgeLink, obsCommand)
 		}
 		wg.Wait()
 		eT := time.Since(startT)

@@ -21,12 +21,7 @@ func Productor(channel chan string, dbw *database.DbWorker) {
 }
 
 // 消费者负责执行shell
-func Consumer(channel chan string, dbw *database.DbWorker, wg *sync.WaitGroup, osslink string) {
-
-	//errOut :=*utils.Log
-	//logfile,_:=os.OpenFile("logs/objectss_err.log", os.O_CREATE|os.O_RDWR|os.O_APPEND, 0644)
-	//errOut.SetOutput(logfile)
-
+func Consumer(channel chan string, dbw *database.DbWorker, wg *sync.WaitGroup, osslink string, obsCommand string) {
 	for {
 		path, ok := <-channel // 此处会阻塞, 如果信道中没有数据的话
 		if ok {
@@ -36,7 +31,7 @@ func Consumer(channel chan string, dbw *database.DbWorker, wg *sync.WaitGroup, o
 				//utils.Log.Info("path:", pathDir, "ComsumerNume:", ComsuNum)
 				// 拷贝版本库到oss
 				ossPath := fmt.Sprintf("%s%s", osslink, path)
-				copyExec := fmt.Sprintf("obsutil sync %s %s", path, ossPath)
+				copyExec := fmt.Sprintf("%s %s %s", obsCommand, path, ossPath)
 
 				fmt.Println("shell:", copyExec)
 				s, err := Exec_linux_shell(copyExec)
@@ -44,6 +39,7 @@ func Consumer(channel chan string, dbw *database.DbWorker, wg *sync.WaitGroup, o
 				if err == nil {
 					dbw.UpdateRepositoryOssbyPath(path)
 				} else {
+					
 					utils.Log.Errorf("对象存储命令行执行失败,错误为: %s ; 执行命令为： %s  ; 命令返回值: %s ",err,copyExec,s )
 
 				}
